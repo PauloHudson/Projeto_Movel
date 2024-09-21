@@ -23,8 +23,8 @@ Este projeto implementa um jogo de sequência inspirado no clássico "Genius" (o
 - Ter o Arduino IDE instalado.
 - Componentes necessários:
   - 1 Arduino Uno
-  - LEDs (4)
-  - Botões (3 )
+  - LEDs (2)
+  - Botões (3)
   - Buzzer
   - Fios de conexão
   - Protoboard 
