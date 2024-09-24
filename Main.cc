@@ -4,6 +4,7 @@ int buzzer = 6;
 int bot1 = 10;
 int bot2 = 9;
 int bot_reset = 13;
+
 // LEDs
 int led1 = 7;
 int led2 = 8;
@@ -42,18 +43,32 @@ void mostrarSequencia() {
   }
 }
 
-// Função para tocar som de acerto
+//Reproduz musica de acerto
 void somAcerto() {
-  tone(buzzer, 1000, 500); 
-  delay(500);
-  noTone(buzzer);
+  tone(buzzer, 196, 250); 
+  delay(325);                    
+  tone(buzzer, 196, 125); 
+  delay(160);                    
+  tone(buzzer, 220, 125); 
+  delay(160);                    
+  tone(buzzer, 220, 325); 
+  delay(325);                    
+  
+  noTone(buzzer); 
 }
 
-// Função para tocar som de erro
+//Reproduz musica de erro
 void somErro() {
-  tone(buzzer, 200, 500); 
-  delay(500);
-  noTone(buzzer);
+  tone(buzzer, 196, 125); 
+  delay(230);                    
+  tone(buzzer, 196, 125); 
+  delay(230);                    
+  tone(buzzer, 196, 125); 
+  delay(230);                    
+  tone(buzzer, 196, 125); 
+  delay(230);                    
+  
+  noTone(buzzer); 
 }
 
 // Função para verificar a sequência
