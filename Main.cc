@@ -216,7 +216,7 @@ void loop() {
     }
   }
 
-  // Fase 2: Perguntas de Sim ou Não
+  // Fase 2 - Pergunta 1
   if (fase == 2) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
@@ -250,9 +250,149 @@ void loop() {
       }
     }
   }
-
-  // Fase 3: Pergunta final
+  
+  // Fase 3 - Pergunta 2
   if (fase == 3) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Pergunta 2:");
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Marte eh azul?");
+
+    while (true) {
+      // Atualiza a leitura dos botões dentro do loop
+      button_True = digitalRead(bot1);
+      button_False = digitalRead(bot2);
+
+      if (button_False == HIGH) {
+        // Resposta correta
+        somAcerto();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Acertou!");
+        delay(2000);
+        fase = 4; // Avançar para a proxima fase 
+        break;
+      } else if (button_True == HIGH) {
+        // Resposta errada
+        somErro();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Errou!");
+        delay(2000);
+        fase = 1; // Volta para a primeira fase
+        break;
+      }
+    }
+  }
+
+  // Fase 4 - Pergunta 3
+  if (fase == 4) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Pergunta 3:");
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Agua e colorida?");
+
+    while (true) {
+      // Atualiza a leitura dos botões dentro do loop
+      button_True = digitalRead(bot1);
+      button_False = digitalRead(bot2);
+
+      if (button_False == HIGH) {
+        // Resposta correta
+        somAcerto();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Acertou!");
+        delay(2000);
+        fase = 5; // Avançar para a proxima fase 
+        break;
+      } else if (button_True == HIGH) {
+        // Resposta errada
+        somErro();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Errou!");
+        delay(2000);
+        fase = 1; // Volta para a primeira fase
+        break;
+      }
+    }
+  }
+  
+  // Fase 5 - Pergunta 4
+  if (fase == 5) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Pergunta 4:");
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("CPU == PC ?");
+
+    while (true) {
+      // Atualiza a leitura dos botões dentro do loop
+      button_True = digitalRead(bot1);
+      button_False = digitalRead(bot2);
+
+      if (button_False == HIGH) {
+        // Resposta correta
+        somAcerto();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Acertou!");
+        delay(2000);
+        fase = 6; // Avançar para a proxima fase 
+        break;
+      } else if (button_True == HIGH) {
+        // Resposta errada
+        somErro();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Errou!");
+        delay(2000);
+        fase = 1; // Volta para a primeira fase
+        break;
+      }
+    }
+  }
+  
+  // Fase 6 - Pergunta 5
+  if (fase == 6) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Pergunta 5:");
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Android > Apple?");
+
+    while (true) {
+      // Atualiza a leitura dos botões dentro do loop
+      button_True = digitalRead(bot1);
+      button_False = digitalRead(bot2);
+
+      if (button_True == HIGH) {
+        // Resposta correta
+        somAcerto();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Acertou!");
+        delay(2000);
+        fase = 7; // Avançar para a proxima fase 
+        break;
+      } else if (button_False == HIGH) {
+        // Resposta errada
+        somErro();
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Errou!");
+        delay(2000);
+        fase = 1; // Volta para a primeira fase
+        break;
+      }
+    }
+  }
+  
+  // Fase 4: Pergunta final
+  if (fase == 7) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Pergunta Final:");
