@@ -29,3 +29,5 @@ Este projeto implementa um jogo de sequência inspirado no clássico "Genius" (o
   - Fios de conexão
   - Protoboard 
 
+![image](https://github.com/user-attachments/assets/e762b3be-20c7-4c3f-8153-bfec160a567c)
+
