@@ -71,6 +71,19 @@ void somErro() {
   noTone(buzzer); 
 }
 
+
+void retornaInicio(){
+  lcd_1.clear();
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Reiniciando.");
+  delay(2000);
+  fase = 1;
+  posicaoAtual = 0;
+  jogandoMemoria = true;
+
+  return;
+}
+
 // Função para verificar a sequência
 bool verificarTentativa(int tentativa[], int tamanho) {
   for (int i = 0; i < tamanho; i++) {
@@ -142,8 +155,23 @@ void loop() {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Repita a seq");
-
+    
+    
     while (posicaoAtual < SEQUENCIA_TAMANHO) {
+      int button_Reset = digitalRead(bot_reset);
+
+      if (button_Reset == HIGH) {
+        lcd_1.clear();
+        lcd_1.setCursor(0, 0);
+        lcd_1.print("Reiniciando...");
+        delay(2000);
+        fase = 1;
+        posicaoAtual = 0;
+        jogandoMemoria = true;
+        
+        return;
+      }
+
       // Atualiza a leitura dos botões dentro do loop
       button_True = digitalRead(bot1);
       button_False = digitalRead(bot2);
@@ -246,6 +274,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Volta para a primeira fase
+        retornaInicio();
         break;
       }
     }
@@ -281,6 +310,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Volta para a primeira fase
+        retornaInicio();
         break;
       }
     }
@@ -316,6 +346,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Volta para a primeira fase
+        retornaInicio();
         break;
       }
     }
@@ -351,6 +382,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Volta para a primeira fase
+        retornaInicio();
         break;
       }
     }
@@ -386,6 +418,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Volta para a primeira fase
+        retornaInicio();
         break;
       }
     }
@@ -421,6 +454,7 @@ void loop() {
         lcd_1.print("Errou!");
         delay(2000);
         fase = 1; // Reinicia o jogo
+        retornaInicio();
         break;
       }
     }
