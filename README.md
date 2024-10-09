@@ -30,4 +30,5 @@ Este projeto implementa um jogo de sequência inspirado no clássico "Genius" (o
   - Protoboard 
 
 ![image](https://github.com/user-attachments/assets/e762b3be-20c7-4c3f-8153-bfec160a567c)
-
+![image](https://github.com/user-attachments/assets/681a8d2f-50b8-461c-9dc0-30f451745cad)
+![image](https://github.com/user-attachments/assets/40499a02-8d56-4e11-98b6-362b7ef0c3cc)
