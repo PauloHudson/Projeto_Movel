@@ -2,13 +2,14 @@
 
 ## Descrição
 
-Este projeto implementa um jogo de sequência inspirado no clássico "Genius" (ou "Simon Says") utilizando Arduino. O objetivo é desafiar os jogadores a seguir e reproduzir uma sequência de luzes e sons, testando sua memória e habilidades de resposta.
+Este projeto implementa um jogo de sequência inspirado no clássico "Genius" utilizando Arduino. O objetivo é desafiar os jogadores a seguir e reproduzir uma sequência de luzes e sons, testando sua memória e habilidades de resposta com as perguntas ao decorrer do jogo.
 
 ## Funcionalidades
 
 - **Sequência aleatória**: O jogo gera uma sequência de luzes de forma aleatória.
 - **Feedback sonoro**: Cada luz é acompanhada por um som correspondente para uma experiência imersiva.
-- **Interface intuitiva**: O design é simples e acessível para jogadores de todas as idades.
+- **Interface intuitiva**: O design é simples e acessível
+- **Perguntas e Respostas**: A cada acerto ou errata, o jogo te dá feedbacks imersivos.
 
 ## Tecnologias Utilizadas
 
@@ -17,11 +18,11 @@ Este projeto implementa um jogo de sequência inspirado no clássico "Genius" (o
 - **IDE**: Arduino IDE
 
 ## Como Executar o Projeto
-
-### Pré-requisitos
-
 - Ter o Arduino IDE instalado.
-- Componentes necessários:
+- Excutar o programa e subir o software.
+- Aproveitar o jogo.
+  
+## Componentes necessários:
   - 1 Arduino Uno
   - LEDs (2)
   - Botões (3)
